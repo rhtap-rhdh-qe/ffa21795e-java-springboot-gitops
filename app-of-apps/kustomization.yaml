@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: ffa21795e-java-springboot 
+  janus-idp.io/tekton: ffa21795e-java-springboot
+  backstage.io/kubernetes-id: ffa21795e-java-springboot
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: ffa21795e-java-springboot
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
